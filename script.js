@@ -6,7 +6,6 @@ function ocultarPostres() {
     document.getElementById("selectorPostre").style.display = "none";
 }
 
-// 1. Al cargar la página, pintamos de rojo las mesas que estén guardadas en localStorage
 document.addEventListener("DOMContentLoaded", function() {
     const mesasOcupadas = JSON.parse(localStorage.getItem("mesasOcupadas")) || [];
     
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// 2. Al hacer clic en "Enviar pedido"
 document.getElementById("formularioPedido").addEventListener("submit", function(event) {
     event.preventDefault(); // Evita que la página recargue de golpe
 
@@ -31,7 +29,6 @@ document.getElementById("formularioPedido").addEventListener("submit", function(
 
     const datos = new FormData(this);
 
-    // Enviamos los datos a PHP para que se registren en phpMyAdmin
     fetch("pedido.php", {
         method: "POST",
         body: datos
@@ -40,7 +37,6 @@ document.getElementById("formularioPedido").addEventListener("submit", function(
     .then(resultado => {
         console.log(resultado);
 
-        // Guardamos la mesa seleccionada en el localStorage del navegador
         let mesasOcupadas = JSON.parse(localStorage.getItem("mesasOcupadas")) || [];
         if (!mesasOcupadas.includes(numeroMesaSeleccionada)) {
             mesasOcupadas.push(numeroMesaSeleccionada);
@@ -49,7 +45,6 @@ document.getElementById("formularioPedido").addEventListener("submit", function(
 
         alert("¡Pedido registrado con éxito!");
 
-        // Recargamos la página automáticamente para ver la mesa en rojo
         location.reload();
     })
     .catch(error => {
