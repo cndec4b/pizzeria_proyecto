@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>Block Pizza</title>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+    <header class="header-principal">
+        <img src="photos/logo.png" alt="Logo Pizza" class="logo-pizza">
+        <h1 class="Title">Block Pizza</h1>
+    </header>
+  
+    <div class="contenedor-principal">
+
+    <!-- Formulario de pedido -->
+      <div class="columna-formulario">
+
+        <h2 class="subtitulo-seccion">Pedidos</h2>
+
+        <form id="formularioPedido">
+
+            <p class="titulo-seccion">
+              Mesa
+            <p>
+
+            <select id="selectmesa" name="mesa">
+              <option value="1">Mesa 1</option>
+              <option value="2">Mesa 2</option>
+              <option value="3">Mesa 3</option>
+              <option value="4">Mesa 4</option>
+              <option value="5">Mesa 5</option>
+              <option value="6">Mesa 6</option>
+              <option value="7">Mesa 7</option>
+              <option value="8">Mesa 8</option>
+              <option value="9">Mesa 9</option>
+              <option value="10">Mesa 10</option>
+              <option value="11">Mesa 11</option>
+              <option value="12">Mesa 12</option>
+              <option value="13">Mesa 13</option>
+              <option value="14">Mesa 14</option>
+              <option value="15">Mesa 15</option>
+              <option value="16">Mesa 16</option>
+              <option value="17">Mesa 17</option>
+              <option value="18">Mesa 18</option>
+              <option value="19">Mesa 19</option>
+              <option value="20">Mesa 20</option>
+              <option value="21">Mesa 21</option>
+              <option value="22">Mesa 22</option>
+              <option value="23">Mesa 23</option>
+              <option value="24">Mesa 24</option>
+              <option value="25">Mesa 25</option>
+            </select>
+
+            <p class="titulo-seccion">
+              Menú
+            </p>
+
+            <select name="menu">
+              <option value="Pizza a la napolitana">Pizza a la napolitana</option>
+              <option value="Pizza con ananá">Pizza con ananá</option>
+              <option value="Pizza con jamón y muzzarella">Pizza con jamón y muzzarella</option>
+              <option value="Pizza con anchoas">Pizza con anchoas</option>
+              <option value="Pizza especial">Pizza especial</option>
+              <option value="Pizza con burrata y jamón crudo">Pizza con burrata y jamón crudo</option>
+              <option value="Pizza con pollo al verdeo">Pizza con pollo al verdeo</option>
+              <option value="Pizza con masa madre">Pizza con masa madre</option>
+              <option value="Foccacia rellena">Foccacia rellena</option>
+              <option value="Pizza al molde">Pizza al molde</option>
+
+            </select>
+
+            <p class="titulo-seccion">
+              ¿Incluye postre?
+            </p>
+
+            <div class="opciones-postre">
+                <label>
+                    <input type="radio" name="postre" value="si" onclick="mostrarPostres()">
+                    Sí
+                </label>
+
+                <label>
+                    <input type="radio" name="postre" value="no" onclick="ocultarPostres()">
+                    No
+                </label>
+            </div>
+
+            <div id="selectorPostre" style="display: none;">
+              <p class="titulo-seccion"> Postre </p>
+              
+              <select name="postre">
+                <option value="Tiramisú">Tiramisú</option>
+                <option value="Flan con dulce de leche">Flan con dulce de leche</option>
+                <option value="Ensalada de frutas">Ensalada de frutas</option>
+                <option value="Bocha de helado">Bocha de helado</option>
+                <option value="Budín de pan">Budín de pan</option>
+                <option value="Panqueques con dulce de leche">Panqueques con dulce de leche</option>
+                <option value="Brownie con helado">Brownie con helado</option>
+              </select>
+            </div>
+
+                    <button type="submit">
+              Enviar pedido
+            </button>
+
+  </form>
+
+  </div>
+
+  <!-- Mesas -->
+      <div class="columna-mesas">
+      <h2 class=Title2>
+        Mesas
+      </h2>
+
+                <div class=mesas>
+                  
+                <div class="mesa disponible">1</div>
+                <div class="mesa disponible">2</div>
+                <div class="mesa disponible">3</div>
+                <div class="mesa disponible">4</div>
+                <div class="mesa disponible">5</div>
+                <div class="mesa disponible">6</div>
+                <div class="mesa disponible">7</div>
+                <div class="mesa disponible">8</div>
+                <div class="mesa disponible">9</div>
+                <div class="mesa disponible">10</div>
+                <div class="mesa disponible">11</div>
+                <div class="mesa disponible">12</div>
+                <div class="mesa disponible">13</div>
+                <div class="mesa disponible">14</div>
+                <div class="mesa disponible">15</div>
+                <div class="mesa disponible">16</div>
+                <div class="mesa disponible">17</div>
+                <div class="mesa disponible">18</div>
+                <div class="mesa disponible">19</div>
+                <div class="mesa disponible">20</div>
+                <div class="mesa disponible">21</div>
+                <div class="mesa disponible">22</div>
+                <div class="mesa disponible">23</div>
+                <div class="mesa disponible">24</div>
+                <div class="mesa disponible">25</div>
+
+                <div class="leyenda-mesas">
+                    <div class="item-leyenda">
+                    <div class="cuadradito disponible"></div>
+                    <span>Libre</span>
+                </div>
+                <div class="item-leyenda">
+                    <div class="cuadradito ocupada"></div>
+                    <span>Ocupado</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="btnReset">
+                    Liberar todas las mesas
+                </button>
+
+                    </div>
+
+      </div>
+
+
+<script src= "script.js"></script>
+
+
+</body>
+</html>
