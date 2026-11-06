@@ -1,32 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Fredoka:wght@400;500;600;700&display=swap');
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f9;
-}
-
-.header-principal h1 {
-  font-family: 'Bowlby One SC', sans-serif;
-  font-size: 40px;
-  color: #ffcc00;
-  text-align: center;
+  background-image: url('photos/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-.logo-pizza {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+.card-login {
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-h1.Title{
-    text-shadow:
-     2px  2px 0 #000,
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+.card-login h1 {
+  color: #ffcc00;
+  margin-bottom: 5px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #ffc107;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #e0a800;
+}
+
+.decoracion-esquina {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.esquina-superior{
+  top: -30px;
+  right: -30px;
+}
+
+.esquina-inferior{
+  bottom: -30px;
+  left: -30px;
+}
+
+.header-principal {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.titulo-imagen {
+  max-width: 100%; /* Hace que sea responsivo */
+  height: auto;
+  width: 2000px; /* Ajusta este valor según el tamaño que prefieras */
 }
 
 .columna-formulario .titulo-seccion {
@@ -47,7 +107,7 @@ h1.Title{
 .columna-mesas h2, 
 .subtitulo-seccion, 
 .Title2 {
-    font-family: 'Poppins', 'Trebuchet MS', Arial, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 26px !important;
     font-weight: 700;
     color: #222222;
@@ -237,7 +297,7 @@ select:focus{
 
 .mesa.disponible, .cuadradito.disponible {
     background-color: #d1fae5;
-    coloor: #065f46;
+    color: #065f46;
     border: 2px solid #34d399;
 }
 
@@ -290,4 +350,172 @@ select:focus{
     height: 20px;
     border-radius: 4px;
     border: 1px solid #111;
+}
+/* Pantalla del sistema */
+#app-screen {
+    min-height: 100vh;
+    padding: 1px 0;
+    box-sizing: border-box;
+}
+
+/* Tarjeta principal que envuelve todo */
+.tarjeta-app {
+position: relative;
+    width: min(1200px, calc(100% - 48px));
+    box-sizing: border-box;
+    margin: 60px auto;
+    padding: 40px 50px 50px;
+    
+    /* Transparencia con el mismo tono de fondo #fff8f1 */
+    background-color: rgba(255, 248, 241, 0.85); 
+    
+    /* Desenfoca la imagen que queda detrás para un acabado moderno */
+    backdrop-filter: blur(8px); 
+    
+    border-radius: 10px;
+    box-shadow: 0 18px 30px rgba(105, 61, 25, 0.22);
+}
+
+/* Título y logo */
+.header-principal {
+    margin-top: 0;
+    margin-bottom: 35px;
+    gap: 18px;
+}
+
+.header-principal h1 {
+    font-size: 48px;
+}
+
+/* Contenedor de Pedidos y Mesas */
+
+.contenedor-principal {
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 120px;
+}
+
+
+/* Tarjeta de Pedidos */
+.columna-formulario {
+    width: 440px;
+
+    box-sizing: border-box;
+
+    padding: 35px 30px;
+
+    border-radius: 18px;
+
+    transform: none;
+}
+
+/* Tarjeta de Mesas */
+.columna-mesas {
+    width: 390px;
+
+    box-sizing: border-box;
+
+padding: 30px 35px;
+
+    border-radius: 18px;
+}
+
+
+/* Grilla de mesas más prolija */
+.mesas {
+    display: grid;
+
+    grid-template-columns: repeat(5, 52px);
+
+    gap: 16px;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 10px;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Cuadraditos de las mesas */
+.mesa {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVE
+   ========================================== */
+
+@media (max-width: 950px) {
+
+    .tarjeta-app {
+        width: calc(100% - 30px);
+
+        padding: 28px 20px;
+
+        margin: 25px auto;
+    }
+
+    .contenedor-principal {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .columna-formulario,
+    .columna-mesas {
+        width: min(100%, 480px);
+    }
+}
+
+/* Pantallas de celulares */
+@media (max-width: 480px) {
+
+    .header-principal {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .header-principal h1 {
+        font-size: 38px;
+    }
+
+    .mesas {
+        grid-template-columns: repeat(5, minmax(38px, 1fr));
+
+        gap: 8px;
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .mesa {
+        width: 100%;
+        height: 44px;
+    }
 }

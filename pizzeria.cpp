@@ -104,4 +104,3 @@ system(comando.c_str());
 	
 	return 0;
 }
-
